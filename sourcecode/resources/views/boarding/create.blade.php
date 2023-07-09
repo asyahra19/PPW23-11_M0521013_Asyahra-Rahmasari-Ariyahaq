@@ -51,7 +51,7 @@
     </header>
     <div class="container">
         <h1>Form Penitipan Hewan Peliharaan</h1>
-        <form action="{{ route('boarding.store') }}" method="POST" enctype="multipart/form-data" method="POST">
+        <form action="{{ isset($boarding) ? route('boarding.update', $boarding->id) : route('boarding.store') }}" method="POST" enctype="multipart/form-data" method="POST">
             @csrf
             <div class="form-group">
                 <label for="pemilik">Pemilik:</label>
