@@ -73,7 +73,7 @@
                     <td>{{ $boarding->pet_age }}</td>
                     <td>{{ $boarding->entry_date }}</td>
                     <td>{{ $boarding->exit_date }}</td>
-                    <td><img src="{{ Storage::url($boarding->file) }}" alt="Gambar"></td>
+                    <td><img src="{{ asset('storage/' . $boarding->file) }}" alt="Gambar"></td>
                     <td>
                         <a href="{{ route('boarding.edit', $boarding->id) }}" class="btn btn-primary">Edit</a>
                         <form action="{{ route('boarding.destroy', $boarding->id) }}" method="POST" style="display: inline-block;">
